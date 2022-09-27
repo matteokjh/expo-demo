@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner": "matteokjh",
     "name": "expo-demo",
     "slug": "expo-demo",
     "version": "1.0.0",
