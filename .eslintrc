@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "extends": [
+    "@react-native-community",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:import/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "react-native/no-inline-styles": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/named": "off",
+    "import/namespace": "off"
+  }
+}

@@ -1,10 +1,24 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { CompositeNavigationProp } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
-    home: undefined;
-    settings: undefined;
-    'ability-test': undefined;
-}
+  tabs: undefined;
+  'ability-test': undefined;
+};
 
-export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "home">;
+export type MainBottomTabParamList = {
+  home: undefined;
+  settings: undefined;
+};
+
+export type HomeNavigationProps = CompositeNavigationProp<
+  BottomTabNavigationProp<MainBottomTabParamList, 'home'>,
+  NativeStackNavigationProp<RootStackParamList, 'tabs'>
+>;
+
+export type TabBarIcon = (props: {
+  focused: boolean;
+  color: string;
+  size: number;
+}) => React.ReactNode;

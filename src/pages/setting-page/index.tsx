@@ -1,9 +1,11 @@
-import { View, Text } from "react-native"
+import { View, Text } from 'react-native';
 
 const SettingScreen = () => {
-    return <View>
-        <Text>This is a setting page</Text>
+  return (
+    <View>
+      <Text>This is a setting page</Text>
     </View>
-}
+  );
+};
 
 export default SettingScreen;
