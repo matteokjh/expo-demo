@@ -15,6 +15,7 @@ import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { Button as ButtonPlain, Alert } from 'react-native';
 import SettingsIcon from './src/components/icons/settings-icon';
 import HomeIcon from './src/components/icons/home-icon';
+import AbilityDetail from './src/pages/ability-detail';
 
 const getScreenOptions = (route: RouteProp<ParamListBase, 'tabs'>) => {
   const routeName = getFocusedRouteNameFromRoute(route) ?? 'home';
@@ -78,9 +79,16 @@ const App = () => {
           <Stack.Screen
             name="ability-test"
             options={() => ({
-              headerTitle: 'Ability Test'
+              headerTitle: 'ReactNative Abilities'
             })}
             component={AbilityTest}
+          />
+          <Stack.Screen
+            name="ability-detail"
+            options={({ route }) => ({
+              headerTitle: route.params?.title
+            })}
+            component={AbilityDetail}
           />
         </Stack.Navigator>
       </ApplicationProvider>

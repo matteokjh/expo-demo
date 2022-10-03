@@ -10,10 +10,10 @@ const HomeScreen = () => {
   return (
     <View className="flex h-full bg-stone-900 items-center">
       <Text className="text-gray-100 text-5xl font-bold pt-10 pb-5">
-        Hello World!
+        Hello World
       </Text>
       <Button onPress={() => navigation.navigate('ability-test')}>
-        Abilities Demo
+        ReactNative Abilities Showcase
       </Button>
     </View>
   );

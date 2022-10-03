@@ -5,6 +5,9 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 export type RootStackParamList = {
   tabs: undefined;
   'ability-test': undefined;
+  'ability-detail': {
+    title: string;
+  };
 };
 
 export type MainBottomTabParamList = {
@@ -15,6 +18,16 @@ export type MainBottomTabParamList = {
 export type HomeNavigationProps = CompositeNavigationProp<
   BottomTabNavigationProp<MainBottomTabParamList, 'home'>,
   NativeStackNavigationProp<RootStackParamList, 'tabs'>
+>;
+
+export type AbilityTestProps = NativeStackNavigationProp<
+  RootStackParamList,
+  'ability-test'
+>;
+
+export type AbilityDetailProps = NativeStackNavigationProp<
+  RootStackParamList,
+  'ability-detail'
 >;
 
 export type TabBarIcon = (props: {
